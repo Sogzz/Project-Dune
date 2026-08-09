@@ -1,0 +1,75 @@
+{
+  "id": "arrakis",
+  "name": "Arrakis",
+  "tagline": "The Spice World, Dune",
+  "sector": "Canopus System",
+  "environment": {
+    "climate": "Extreme Thermal / Arid",
+    "primaryExport": "Melange (Spice)",
+    "gravity": "0.91g"
+  },
+  "renderConfig": {
+    "radius": 5,
+    "rotationSpeed": 0.0005,
+  "procedural": {
+    "baseColor": "#d4a373",
+    "peakColor": "#faedcd",
+    "basinColor": "#cc7a00",
+    "noiseScale": 0.15
+  },
+    "textures": {
+      "diffuseUrl": "/textures/arrakis/surface.jpg",
+      "bumpUrl": "/textures/arrakis/elevation.jpg"
+    },
+    "atmosphere": {
+      "color": "#f59e0b",
+      "intensity": 1.2
+    },
+    "ambientAudioUrl": "/audio/arrakis-desert.mp3"
+  },
+  "landmarks": [
+    {
+      "id": "arrakeen",
+      "name": "Arrakeen",
+      "subtitle": "Imperial Seat & Citadel",
+      "category": "city",
+      "faction": "Atreides",
+      "coordinates": {
+        "lat": 32.4,
+        "lng": 14.2
+      },
+      "customModelUrl": "/models/arrakeen-citadel.glb",
+      "summary": "The administrative capital city, sheltered behind the natural granite barrier of the Shield Wall.",
+      "lore": "Built to withstand severe heat and dust storms, Arrakeen contains the Residency and primary spice distribution hubs.",
+      "gallery": [
+        {
+          "id": "img-01",
+          "url": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200",
+          "caption": "Residency District overlooking the Shield Wall",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "sietch-tabr",
+      "name": "Sietch Tabr",
+      "subtitle": "Fremen Deep Desert Stronghold",
+      "category": "sietch",
+      "faction": "Fremen",
+      "coordinates": {
+        "lat": -12.8,
+        "lng": 45.6
+      },
+      "summary": "Subterranean Fremen cavern settlement hidden beneath the rocky ridges of the Minor Erg.",
+      "lore": "Governed by Naib Stilgar, Sietch Tabr stores millions of decaliters of water in sealed underground catch-basins.",
+      "gallery": [
+        {
+          "id": "img-02",
+          "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200",
+          "caption": "Concealed ridge entry points",
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}

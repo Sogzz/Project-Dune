@@ -1,0 +1,47 @@
+{
+  "id": "caladan",
+  "name": "Caladan",
+  "tagline": "Ocean World, Ancestral Home of House Atreides",
+  "sector": "Delta Pavonis System",
+  "environment": {
+    "climate": "Temperate / Oceanic",
+    "primaryExport": "Pundi Rice / Wine",
+    "gravity": "1.02g"
+  },
+  "renderConfig": {
+    "radius": 5,
+    "rotationSpeed": 0.001,
+    "textures": {
+      "diffuseUrl": "/textures/caladan/surface.jpg",
+      "bumpUrl": "/textures/caladan/elevation.jpg"
+    },
+    "atmosphere": {
+      "color": "#3b82f6",
+      "intensity": 1.5
+    },
+    "ambientAudioUrl": "/audio/caladan-ocean.mp3"
+  },
+  "landmarks": [
+    {
+      "id": "castle-caladan",
+      "name": "Castle Caladan",
+      "subtitle": "Ancestral Seat of House Atreides",
+      "category": "fortress",
+      "faction": "Atreides",
+      "coordinates": {
+        "lat": 45.0,
+        "lng": -10.5
+      },
+      "summary": "Ancient stone fortress built into coastal cliffs overlooking the Great Ocean.",
+      "lore": "The historic home of Dukes of House Atreides for twenty-six generations before the relocation to Arrakis.",
+      "gallery": [
+        {
+          "id": "img-03",
+          "url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200",
+          "caption": "Clifftop fortress fortifications",
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
