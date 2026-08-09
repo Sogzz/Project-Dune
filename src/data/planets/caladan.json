@@ -1,44 +1,72 @@
 {
   "id": "caladan",
   "name": "Caladan",
-  "tagline": "Ocean World, Ancestral Home of House Atreides",
+  "tagline": "The Water World, Ancestral Home of House Atreides",
   "sector": "Delta Pavonis System",
   "environment": {
-    "climate": "Temperate / Oceanic",
-    "primaryExport": "Pundi Rice / Wine",
-    "gravity": "1.02g"
+    "climate": "Oceanic / Temperate",
+    "primaryExport": "Pundi Rice, Seafood, Wine",
+    "gravity": "1.0g"
   },
   "renderConfig": {
     "radius": 5,
-    "rotationSpeed": 0.001,
+    "rotationSpeed": 0.0004,
+    "procedural": {
+      "baseColor": "#006994",
+      "peakColor": "#228b50",
+      "basinColor": "#00008b",
+      "noiseScale": 0.12
+    },
     "textures": {
       "diffuseUrl": "/textures/caladan/surface.jpg",
       "bumpUrl": "/textures/caladan/elevation.jpg"
     },
     "atmosphere": {
-      "color": "#3b82f6",
+      "color": "#87ceeb",
       "intensity": 1.5
     },
     "ambientAudioUrl": "/audio/caladan-ocean.mp3"
   },
   "landmarks": [
     {
-      "id": "castle-caladan",
-      "name": "Castle Caladan",
-      "subtitle": "Ancestral Seat of House Atreides",
-      "category": "fortress",
+      "id": "castel-caladan",
+      "name": "Castel Caladan",
+      "subtitle": "Ancient Seat of House Atreides",
+      "category": "castle",
       "faction": "Atreides",
       "coordinates": {
-        "lat": 45.0,
-        "lng": -10.5
+        "lat": 45.2,
+        "lng": -12.4
       },
-      "summary": "Ancient stone fortress built into coastal cliffs overlooking the Great Ocean.",
-      "lore": "The historic home of Dukes of House Atreides for twenty-six generations before the relocation to Arrakis.",
+      "customModelUrl": "/models/castel-caladan.glb",
+      "summary": "An ancient, stone-hewn fortress overlooking the sea, serving as the home of the Atreides for generations.",
+      "lore": "Carved into the coastal cliffs, Castel Caladan is heavily fortified against both naval and aerial assault, yet maintains a deep harmony with the surrounding natural ecosystem.",
       "gallery": [
         {
-          "id": "img-03",
-          "url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200",
-          "caption": "Clifftop fortress fortifications",
+          "id": "img-cal-01",
+          "url": "https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?q=80&w=1200",
+          "caption": "Storm clouds gathering over the coastal cliffs",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "pundi-village",
+      "name": "Eastern Pundi Rice Terraces",
+      "subtitle": "Agricultural Hub",
+      "category": "village",
+      "faction": "Atreides",
+      "coordinates": {
+        "lat": 14.5,
+        "lng": 112.8
+      },
+      "summary": "Extensive submerged farming terraces responsible for the majority of the planet's Pundi rice output.",
+      "lore": "The local fishing and farming communities have cultivated these tidal regions for centuries, creating a sustainable foundation for the planet's economy.",
+      "gallery": [
+        {
+          "id": "img-cal-02",
+          "url": "https://images.unsplash.com/photo-1464039397811-476f652a343b?q=80&w=1200",
+          "caption": "Workers harvesting in the flooded terraces",
           "type": "image"
         }
       ]

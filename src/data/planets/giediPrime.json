@@ -1,0 +1,75 @@
+{
+  "id": "giedi",
+  "name": "Giedi Prime",
+  "tagline": "The Industrial Center, Home of House Harkonnen",
+  "sector": "Ophiuchi B System",
+  "environment": {
+    "climate": "Heavily Polluted / Industrial",
+    "primaryExport": "Manufactured Goods, Obsidian",
+    "gravity": "1.1g"
+  },
+  "renderConfig": {
+    "radius": 5,
+    "rotationSpeed": 0.0006,
+    "procedural": {
+        "baseColor": "#1a1a1a",
+        "peakColor": "#333333",
+        "basinColor": "#0a0a0a",
+        "noiseScale": 0.25
+    },
+    "textures": {
+      "diffuseUrl": "/textures/giedi-prime/surface.jpg",
+      "bumpUrl": "/textures/giedi-prime/elevation.jpg"
+    },
+    "atmosphere": {
+      "color": "#556b2f",
+      "intensity": 2.0
+    },
+    "ambientAudioUrl": "/audio/giedi-machinery.mp3"
+  },
+  "landmarks": [
+    {
+      "id": "harko-city",
+      "name": "Harko City",
+      "subtitle": "The Baron's Megalopolis",
+      "category": "city",
+      "faction": "Harkonnen",
+      "coordinates": {
+        "lat": 18.9,
+        "lng": -65.2
+      },
+      "customModelUrl": "/models/harko-city.glb",
+      "summary": "A sprawling, brutalist industrial complex that serves as the capital and primary manufacturing hub.",
+      "lore": "Dominated by the massive Keep of the Baron, the city's skies are permanently choked with smog from the unending weapons manufacturing lines below.",
+      "gallery": [
+        {
+          "id": "img-gp-01",
+          "url": "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200",
+          "caption": "Smokestacks towering over the brutalist architecture",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "barony-arena",
+      "name": "The Barony Gladiator Arena",
+      "subtitle": "Entertainment District",
+      "category": "arena",
+      "faction": "Harkonnen",
+      "coordinates": {
+        "lat": 20.1,
+        "lng": -64.8
+      },
+      "summary": "A massive, triangular amphitheater used for blood sports to entertain the Harkonnen elite.",
+      "lore": "Fighters from across the galaxy, often prisoners of war, are thrown into this arena for the Baron's amusement and to keep the local populace pacified by violence.",
+      "gallery": [
+        {
+          "id": "img-gp-02",
+          "url": "https://images.unsplash.com/photo-1518715303843-586e350765b2?q=80&w=1200",
+          "caption": "The dark, obsidian walls of the fighting pits",
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}

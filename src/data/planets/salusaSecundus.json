@@ -1,0 +1,54 @@
+{
+  "id": "salusa-secundus",
+  "name": "Salusa Secundus",
+  "tagline": "The Imperial Prison Planet",
+  "sector": "Gamma Corvi System",
+  "environment": {
+    "climate": "Post-Atomic Wasteland",
+    "primaryExport": "Sardaukar Troops",
+    "gravity": "1.04g"
+  },
+  "renderConfig": {
+    "radius": 4.8,
+    "rotationSpeed": 0.00045,
+    "procedural": {
+      "baseColor": "#a3a3a3",
+      "peakColor": "#e5e5e5",
+      "basinColor": "#525252",
+      "noiseScale": 0.22
+    },
+    "textures": {
+      "diffuseUrl": "/textures/salusa/surface.jpg",
+      "bumpUrl": "/textures/salusa/elevation.jpg"
+    },
+    "atmosphere": {
+      "color": "#6b7280",
+      "intensity": 0.8
+    },
+    "ambientAudioUrl": "/audio/salusa-winds.mp3"
+  },
+  "landmarks": [
+    {
+      "id": "sardaukar-hq",
+      "name": "Sardaukar Training Grounds",
+      "subtitle": "Elite Military Garrison",
+      "category": "military",
+      "faction": "House Corrino",
+      "coordinates": {
+        "lat": 45.1,
+        "lng": -10.5
+      },
+      "customModelUrl": "/models/sardaukar-camp.glb",
+      "summary": "Brutal training facilities designed to forge the Emperor's elite terror troops.",
+      "lore": "The survival rate here is notoriously low. The harshness of the environment simulates Arrakis, compounded by extreme cold and toxic storms.",
+      "gallery": [
+        {
+          "id": "ss-img-01",
+          "url": "https://images.unsplash.com/photo-1534237710431-e2fc698436d0?q=80&w=1200",
+          "caption": "Misty, ruined landscape surrounding the barracks",
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}

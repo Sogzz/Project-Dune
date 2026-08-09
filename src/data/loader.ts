@@ -1,14 +1,23 @@
 import { Planet } from '../lib/blueprint';
 import arrakisRaw from './planets/arrakis.json';
 import caladanRaw from './planets/caladan.json';
+import giediRaw from './planets/giediPrime.json';
+import tleilaxRaw from './planets/tleilax.json';
+import salusaRaw from './planets/salusaSecundus.json';
 
 // Cast untyped JSON imports to strict Planet types
 const arrakis = arrakisRaw as Planet;
 const caladan = caladanRaw as Planet;
+const giedi = giediRaw as Planet;
+const tleilax = tleilaxRaw as Planet;
+const salusa = salusaRaw as Planet;
 
 export const PLANETS_REGISTRY: Record<string, Planet> = {
-  arrakis,
-  caladan,
+  'arrakis': arrakis,
+  'caladan': caladan,
+  'giedi': giedi,
+  'tleilax': tleilax,
+  'salusa-secundus': salusa,  
 };
 
 // Get a single planet dataset by its slug ID

@@ -1,0 +1,54 @@
+{
+  "id": "tleilax",
+  "name": "Tleilax",
+  "tagline": "Planet of the Bene Tleilax",
+  "sector": "Thalim System",
+  "environment": {
+    "climate": "Temperate / Controlled",
+    "primaryExport": "Gholas & Face Dancers",
+    "gravity": "0.98g"
+  },
+  "renderConfig": {
+    "radius": 4.9,
+    "rotationSpeed": 0.00048,
+    "procedural": {
+      "baseColor": "#94a3b8",
+      "peakColor": "#cbd5e1",
+      "basinColor": "#475569",
+      "noiseScale": 0.12
+    },
+    "textures": {
+      "diffuseUrl": "/textures/tleilax/surface.jpg",
+      "bumpUrl": "/textures/tleilax/elevation.jpg"
+    },
+    "atmosphere": {
+      "color": "#9f7aea",
+      "intensity": 1.1
+    },
+    "ambientAudioUrl": "/audio/tleilax-machinery.mp3"
+  },
+  "landmarks": [
+    {
+      "id": "bandalong",
+      "name": "Bandalong",
+      "subtitle": "The Secretive Capital",
+      "category": "city",
+      "faction": "Bene Tleilax",
+      "coordinates": {
+        "lat": -5.2,
+        "lng": 110.3
+      },
+      "customModelUrl": "/models/bandalong-bio-facility.glb",
+      "summary": "The highly restricted capital city of the Tleilaxu, strictly off-limits to all outsiders.",
+      "lore": "Bandalong houses the core of the Tleilaxu masters' genetic operations and the sacred, hidden Axlotl tanks.",
+      "gallery": [
+        {
+          "id": "tl-img-01",
+          "url": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200",
+          "caption": "Bio-industrial structures glowing under overcast skies",
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
