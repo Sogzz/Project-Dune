@@ -43,7 +43,7 @@ export default function MasterOverlay({
       </header>
 
       {/* Middle Body: Sidebar Pinned Left */}
-      <div className="w-full flex-1 flex items-center justify-start my-4">
+      <div className="w-full flex-1 flex items-start justify-start my-4">
         <LeftBar
           planets={planets}
           activePlanetId={activePlanetId}

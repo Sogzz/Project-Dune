@@ -40,7 +40,7 @@ export default function BottomBar({ planet, accentColor }: BottomBarProps) {
         {/* Center Column: Surface Landmarks */}
         {landmarks && landmarks.length > 0 && (
           <div className="flex-1 border-y md:border-y-0 md:border-x border-slate-800/80 py-2 md:py-0 md:px-6">
-            <div className="text-[10px] text-slate-500 uppercase mb-1">// KNOWN_LANDMARKS</div>
+            <div className="text-[15px] text-slate-500 uppercase mb-1">//KNOWN_LANDMARKS</div>
             <div className="flex flex-wrap gap-2 text-xs text-slate-300">
               {landmarks.map((lm) => (
                 <span
@@ -54,20 +54,20 @@ export default function BottomBar({ planet, accentColor }: BottomBarProps) {
           </div>
         )}
 
-        {/*Right Column*/}
+        {/* Right Column */}
         {environment && (
-          <div className="flex gap-2 text-xs">
-            <div className="px-3 py-1 bg-slate-900/90 border border-slate-800 rounded text-center">
-              <span className="text-slate-500 block text-[9px]">CLIMATE</span>
-              <span className="text-amber-400 font-semibold text-[11px]">{environment.climate}</span>
+          <div className="flex flex-[0.9] justify-end gap-3 text-xs">
+            <div className="px-4 py-1.5 bg-slate-900/90 border border-slate-800 rounded text-center min-w-[85px]">
+              <span className="text-slate-400 block text-[11px] tracking-wide mb-0.5">CLIMATE</span>
+              <span className="text-amber-400 font-semibold text-[12px]">{environment.climate}</span>
             </div>
-            <div className="px-3 py-1 bg-slate-900/90 border border-slate-800 rounded text-center">
-              <span className="text-slate-500 block text-[9px]">EXPORT</span>
-              <span className="text-emerald-400 font-semibold text-[11px]">{environment.primaryExport}</span>
+            <div className="px-4 py-1.5 bg-slate-900/90 border border-slate-800 rounded text-center min-w-[85px]">
+              <span className="text-slate-400 block text-[11px] tracking-wide mb-0.5">EXPORT</span>
+              <span className="text-emerald-400 font-semibold text-[12px]">{environment.primaryExport}</span>
             </div>
-            <div className="px-3 py-1 bg-slate-900/90 border border-slate-800 rounded text-center">
-              <span className="text-slate-500 block text-[9px]">GRAVITY</span>
-              <span style={{ color: accentColor }} className="font-semibold text-[11px]">
+            <div className="px-4 py-1.5 bg-slate-900/90 border border-slate-800 rounded text-center min-w-[85px]">
+              <span className="text-slate-400 block text-[11px] tracking-wide mb-0.5">GRAVITY</span>
+              <span style={{ color: accentColor }} className="font-semibold text-[12px]">
                 {environment.gravity}
               </span>
             </div>

@@ -18,8 +18,8 @@ export default function LeftBar({
   return (
     <aside className="pointer-events-auto flex flex-col gap-2 w-56 p-3 bg-slate-950/85 backdrop-blur-xl border-r border-y border-slate-800/80 rounded-r-md text-slate-300 font-mono shadow-2xl">
       {/* Header */}
-      <div className="flex items-center justify-between pb-2 border-b border-slate-800 text-[10px] tracking-widest text-slate-400">
-        <span>// SELECT_TARGET</span>
+      <div className="flex items-center justify-between pb-2 border-b border-slate-800 text-[12px] tracking-widest text-slate-400">
+        <span>//PLANET_SELECTOR</span>
         <span
           className="h-2 w-2 rounded-full animate-pulse"
           style={{ backgroundColor: accentColor, boxShadow: `0 0 8px ${accentColor}` }}

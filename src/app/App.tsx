@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
+import { Stars } from '@react-three/drei';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import Planet from '../Planet';
 import { getPlanetById, getAllPlanets } from '../data/loader'; // Assuming loader has getAllPlanets or we build an array
@@ -40,6 +41,7 @@ export default function App() {
         )}
         
         <OrbitControls enablePan={false} enableZoom={true} autoRotate autoRotateSpeed={0.5} />
+        <Stars radius={100} depth={40} count={4000} factor={4} saturation={0} fade />
         
         <EffectComposer>
           <Bloom luminanceThreshold={0.9} luminanceSmoothing={0.1} height={300} />
