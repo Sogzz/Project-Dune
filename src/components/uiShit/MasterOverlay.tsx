@@ -1,6 +1,6 @@
 'use client';
 
-import { Planet } from '../lib/blueprint';
+import { Planet } from '../../lib/blueprint';
 import LeftBar from './leftBar';
 import BottomBar from './bottomBar';
 import LandmarkPanel from './landmarkPanel';

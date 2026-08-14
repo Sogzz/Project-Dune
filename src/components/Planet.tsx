@@ -2,8 +2,8 @@ import { useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import { createNoise3D } from 'simplex-noise';
 import { useFrame } from '@react-three/fiber';
-import { Planet as PlanetType } from './lib/blueprint';
-import { latLngToVector3 } from './lib/coordinates'; // Import your utility function
+import { Planet as PlanetType } from '../lib/blueprint';
+import { latLngToVector3 } from '../lib/coordinates';
 
 interface PlanetProps {
   planetData: PlanetType;

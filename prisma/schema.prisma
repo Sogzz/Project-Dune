@@ -1,0 +1,136 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Planet {
+  id              String      @id @default(uuid())
+  slug            String      @unique // e.g., "arrakis"
+  name            String
+  tagline         String?
+  lore            String?
+
+  // Sector & Export info
+  sector          String?  
+  satellites      String?     
+  primaryExport   String? 
+  
+  // Environment 
+  language        String?
+  population      String?
+
+  climate         String?     
+  gravity         String?     
+
+  // 3D Rendering (Texture)
+  radius          Float?      
+  rotationSpeed   Float?      
+  colorMapUrl     String?     // Base texture image
+  normalMapUrl    String?     // Surface detail/bump map
+  roughnessMapUrl String?     // Controls shiny vs matte surfaces
+  ambientAudioUrl String?     
+
+  // Relationships
+  landmarks       Landmark[]
+  characters      Character[]
+  factions        Faction[]   // Factions whose homeworld is this planet
+}
+
+model Faction {
+  id          Int         @id @default(autoincrement())
+  slug        String      @unique //e.g., "atreides"
+  name        String      
+  lore        String?
+  colors      String?
+
+  founded     String?
+  status      String?      //p.x "Great House"
+
+  army        String?
+  rulingTitle String?
+
+  // Relationships
+  homeworldId String?
+  homeworld   Planet?     @relation(fields: [homeworldId], references: [id], onDelete: SetNull)
+
+  characters  Character[] // Implicit Many-to-Many relation with Character
+  landmarks   Landmark[]
+}
+
+model Landmark {
+  id             String      @id @default(uuid())
+  slug           String      @unique // e.g., "arrakeen"
+  name           String      
+  subtitle       String?     
+  category       String?     //remember to add a enum category p.x "City, Sietch"
+  shortLore      String?   
+  lore           String?     
+  customModelUrl String?     
+
+  // Relationships
+  planetId       String
+  planet         Planet      @relation(fields: [planetId], references: [id], onDelete: Cascade)
+  
+  factionId      Int?
+  faction        Faction?    @relation(fields: [factionId], references: [id], onDelete: SetNull)
+
+  coordinate     Coordinate?
+  galleryImages  GalleryImage[]
+}
+
+model Coordinate {
+  id          Int         @id @default(autoincrement())
+  lat         Float       
+  lng         Float       
+
+  landmarkId  String      @unique
+  landmark    Landmark    @relation(fields: [landmarkId], references: [id], onDelete: Cascade)
+}
+
+model GalleryImage {
+  id          String      @id @default(uuid())
+  url         String      
+  caption     String?     
+  type        String?     
+
+  landmarkId  String
+  landmark    Landmark    @relation(fields: [landmarkId], references: [id], onDelete: Cascade)
+}
+
+model Character {
+  id          Int         @id @default(autoincrement())
+  name        String
+  title       String?
+  gender      String?
+  lore        String?
+
+  birth       String?
+  death       String?
+
+  // Single planet origin/location
+  planetId    String?
+  planet      Planet?     @relation(fields: [planetId], references: [id], onDelete: SetNull)
+
+  // Implicit Many-to-Many relations
+  factions    Faction[]
+  books       Book[]
+}
+
+model Book {
+  id          Int         @id @default(autoincrement())
+  name        String
+  author      String?
+
+  published   Int?
+  pageCount   Int?
+  lore        String
+  shortLore   String?
+
+  prequel     String?
+  sequel      String?
+
+  characters  Character[]
+}

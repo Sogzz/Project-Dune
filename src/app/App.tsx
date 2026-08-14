@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
-import Planet from '../Planet';
+import Planet from '../components/Planet';
 import { getPlanetById, getAllPlanets } from '../data/loader';
-import HUDOverlay from '../uiShit/MasterOverlay';
+import HUDOverlay from '../components/uiShit/MasterOverlay';
 import { Planet as PlanetType } from '../lib/blueprint';
 
 export default function App() {

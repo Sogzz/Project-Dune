@@ -1,6 +1,6 @@
 'use client';
 
-import { Planet } from '../lib/blueprint';
+import { Planet } from '../../lib/blueprint';
 
 interface LeftBarProps {
   planets: Planet[];

@@ -22,3 +22,16 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+/src/generated/prisma
+.env
+
+# AI tooling session states and local configs
+.claude/
+.windsurf/
+.agents/
+
+#Databases 
+scripts/Dune_Wiki.xml
+scripts/dune_pages_current.xml
+prisma/dev.db
